@@ -1,0 +1,32 @@
+{
+  "name": "destiny-client",
+  "version": "0.3.2",
+  "description": "A client for Bungie's Destiny API.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:waltfy/destiny.git"
+  },
+  "keywords": [
+    "Bungie",
+    "Destiny",
+    "API",
+    "client"
+  ],
+  "author": "@waltfy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waltfy/destiny/issues"
+  },
+  "homepage": "https://github.com/waltfy/destiny",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "promise": "^6.0.1",
+    "superagent": "^0.21.0",
+    "superagent-promise": "^0.2.0"
+  },
+  "devDependencies": {
+    "browserify": "^6.3.2",
+    "uglify-js": "^2.4.15"
+  }
+}
