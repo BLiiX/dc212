@@ -62,7 +62,6 @@
               var data = JSON.parse(res.text).Response[0];
               client.account({type: data.membershipType, id: data.membershipId}).end(function (err, account) {
                 var accountData = JSON.parse(account.text).Response.data;
-
                 var p = document.createElement('p');
                 for (var i = 0; i < accountData.characters.length; i++) {
                   var map = new Array();
@@ -74,7 +73,7 @@
                   map['671679327'] = 'Hunter';
                   map['3655393761'] = 'Titan';
                   map['2271682572'] = 'Warlock';
-                  console.log(accountData);
+                  //console.log(accountData);
                   //p.innerHTML += data.displayName + " " + accountData.characters[i].characterLevel + " " + map[accountData.characters[i].characterBase.genderHash] + " " + map[accountData.characters[i].characterBase.raceHash] + " " + map[accountData.characters[i].characterBase.classHash] + " " + '<img src="http://www.bungie.com' + accountData.characters[i].emblemPath + '">' + '<img src="http://www.bungie.com' + accountData.characters[i].backgroundPath + '">'  + '<br><br>'
                   p.innerHTML += "<div class=" + "charPlate" + ">" +
                   "<span class=" + "charLevel" + ">" + data.displayName + " " + accountData.characters[i].characterLevel +   "</span>" + "<br>" +
