@@ -62,7 +62,7 @@
               var data = JSON.parse(res.text).Response[0];
               client.account({type: data.membershipType, id: data.membershipId}).end(function (err, account) {
                 var accountData = JSON.parse(account.text).Response.data;
-                //console.log(accountData.characters.length);
+
                 var p = document.createElement('p');
                 for (var i = 0; i < accountData.characters.length; i++) {
                   var map = new Array();
