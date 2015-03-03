@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="DC212" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="DC212" uploadOnCheckin="a6159d20-312b-42da-b9d2-688ecf7c9b63" autoUploadExternalChanges="true">
     <serverData>
       <paths name="DC212">
         <serverdata>
@@ -10,6 +10,7 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="DC212" />
     <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
   </component>
 </project>
