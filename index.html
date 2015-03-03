@@ -4,48 +4,56 @@
   <title></title>
 </head>
 <style type="text/css">
-  body {
-    background-color: #999;
-    font-family:Tahoma, Geneva, sans-serif;
-  }
-  .grimoire {
-    margin-right: 5px;
-    float: none;
-  }
-  .grimoireText {
-    font-size:10px;
-  }
-  p {
-    font-family: Tahoma, Geneva, sans-serif;
-    color: white;
-  }
-  .charLevel {
-    color: yellow;
-    font-weight: normal;
-    font-size: 2em;
-    line-height:0.7em;
-  }
-  .charPlate {
-    text-align: right;
-    width: 297px;
-    height: 50px;
-    z-index:2;
-    position:relative;
-    /*background-color:blue;*/
-    top: -50;
-    left: 5;
-  }
-  img {
-    /*float:left;*/
-  }
-  .emblemBG {
-    z-index:3;
-    position:relative;
-    width: 297px;
-    height: 50px;
-    top: -50;
-    left: 5;
-  }
+body {
+	background-color: #999;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+.grimoireIMG {
+	margin-right: 5px;
+	margin-left: 10px;
+}
+.grimoireText {
+	font-size: 0.7em;
+}
+p {
+	font-family: Tahoma, Geneva, sans-serif;
+	color: white;
+}
+.charLevel {
+	color: yellow;
+	font-weight: normal;
+	font-size: 1.5em;
+	margin-left:25px;
+	position:relative;
+	top:-20;
+	/*background-color:green;*/
+}
+.charPlate {
+	position:absolute;
+	z-index:3;
+	text-align: left;
+	width: 297px;
+	height: 50px;
+	background-repeat:no-repeat;
+	margin:0;
+	padding:0;
+}
+.emblemBG {
+	width:50px;
+	height:50px;
+	float:left;
+}
+.memberInfo {
+	padding-left:10px;
+	margin-top:15px;
+	width:180px;
+	height:50px;
+	font-size:15px;
+	float:left;
+}
+img {
+/*float:left;*/
+}
 </style>
 <body>
 <div id="Text"></div>
@@ -60,6 +68,10 @@
             .query({definitions: true})
             .end(function (err, res) {
               var data = JSON.parse(res.text).Response[0];
+              
+              var emblemSRC = "http://www.bungie.net" + obj.characters[1].emblemPath;
+              var bgSRC = "http://www.bungie.net" + obj.characters[1].backgroundPath
+              
               client.account({type: data.membershipType, id: data.membershipId}).end(function (err, account) {
                 var accountData = JSON.parse(account.text).Response.data;
 
